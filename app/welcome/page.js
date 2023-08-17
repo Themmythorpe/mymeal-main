@@ -1,6 +1,6 @@
 import WelcomeComponent from "@/components/welcomeComponent"
 
-export default function(){
+const Welcome = () => {
 
     return (
 
@@ -9,3 +9,5 @@ export default function(){
     )
 
 }
+
+export default Welcome

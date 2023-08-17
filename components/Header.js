@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Image from 'next/image';
 
 const Home = () => {
   return (
@@ -7,10 +8,12 @@ const Home = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between ">
         {/* Image Section */}
         <div className="w-full md:w-1/2 mt-6 md:mt-0 order-1 md:order-2">
-          <img
+          <Image
             src="images/jollof.png"
             alt="Hero Image"
             className="h-[400px] w-auto"
+            height={100}
+            width={100}
           />
         </div>
 
