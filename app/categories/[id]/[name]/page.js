@@ -3,7 +3,7 @@ import Link from 'next/link';
 import client from '@/sanityClient';
 import { useCart } from '@/CartContext'; // Adjust the path
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+//import Image from 'next/image';
 
 export default function Categories({ params }){
 
@@ -58,12 +58,11 @@ export default function Categories({ params }){
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                     {foodItems.map((food) => (
                         <div key={food._id} className="bg-white p-4 shadow-md rounded-lg hover:shadow-lg hover:shadow-xl transition-shadow">
-                            <Image
+                            <img
                                 src={food.image}
                                 alt={food.name}
                                 className="w-full h-40 object-cover mb-4 rounded-lg"
-                                height={100}
-                                width={100}
+                                
                             />
                             <h3 className="text-xl font-bold mb-2">{food.name}</h3>
                             <p className="text-gray-600 mb-2">£{food.price}</p>
