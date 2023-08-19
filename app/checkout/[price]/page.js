@@ -38,7 +38,13 @@ export default function Checkout({ params }) {
       });
 
        const data = await response.json();
-      setClientSecret(data.clientSecret);
+
+        setClientSecret(data.clientSecret);
+
+        //console.log(clientSecret)
+
+        localStorage.setItem('clientSecret', clientSecret);
+
     };
 
     fetchData()
@@ -47,11 +53,13 @@ export default function Checkout({ params }) {
 
   //}, []);
 
-  //
+  const local_client_secret = localStorage.getItem('clientSecret')
+
+  //console.log(local_client_secret)
 
   const options = {
     // passing the client secret obtained from the server
-    clientSecret: "pi_3NfsZWJC9t2dpLOu1iNGX3g5_secret_SX8TEYeAOVeETUxXpnAPoJ9ZY",
+    clientSecret: local_client_secret,
   };
 
   return (

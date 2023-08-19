@@ -38,9 +38,13 @@ const FoodSection = () => {
 
   fetchFoodItems()
 
-
   const addToCart = (food) => {
+
     setSelectedItems([...selectedItems, food]);
+
+    let jsonArray = JSON.stringify(selectedItems);
+    localStorage.setItem('objectArray', jsonArray);
+
   };
 
 

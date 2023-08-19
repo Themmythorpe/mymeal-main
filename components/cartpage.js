@@ -10,7 +10,9 @@ import {PaymentElement} from '@stripe/react-stripe-js';
 
 
 const CartPage = () => {
-  const { selectedItems } = useCart();
+  // const { selectedItems } = useCart();
+  let storedJsonArray = localStorage.getItem('objectArray');
+  let selectedItems = JSON.parse(storedJsonArray);
   const router = useRouter();
   const [isAlertOpen, setIsAlertOpen] = useState(false);
 

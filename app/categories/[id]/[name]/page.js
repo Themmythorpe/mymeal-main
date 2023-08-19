@@ -45,8 +45,13 @@ export default function Categories({ params }){
 
   }, []);
 
+
+
   const addToCart = (food) => {
     setSelectedItems([...selectedItems, food]);
+
+    let jsonArray = JSON.stringify(selectedItems);
+    localStorage.setItem('objectArray', jsonArray);
   };
 
     return (
